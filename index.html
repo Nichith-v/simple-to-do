@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        body {
+            background: #393646;
+            color: #F4EEE0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin: 20px;
+
+        }
+
+        a {
+            margin: 5px;
+            font-family: 'Verdana';
+            color: #F4EEE0;
+            text-decoration: none;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .strike {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        .strike a {
+            color: grey;
+        }
+
+        .main-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4.7px);
+            -webkit-backdrop-filter: blur(4.7px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            width: 40%;
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Task List</h1>
+    <div class="main-box">
+
+        <div class="box">
+
+            <ul id="taskList">
+
+                <li><input type="checkbox" id="task1" onclick="strike('task1')">
+
+                    <a href="#" target="_blank">Task 1</a></li>
+
+                <li><input type="checkbox" id="task2" onclick="strike('task2')">
+                    
+                    <a href="#" target="_blank">Task 2</a></li>
+                        
+                <li><input type="checkbox" id="task3" onclick="strike('task3')"> 
+
+                    <a href="#" target="_blank">Task 3</a></li>
+                
+                <!-- Add more tasks -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function strike(taskId) {
+            var checkbox = document.getElementById(taskId);
+            var task = checkbox.parentNode;
+
+            if (checkbox.checked) {
+                task.classList.add('strike');
+            } else {
+                task.classList.remove('strike');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
