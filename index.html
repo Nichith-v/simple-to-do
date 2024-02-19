@@ -7,8 +7,10 @@
     <title>Task List</title>
     <style>
         body {
-            background: #393646;
-            color: #F4EEE0;
+            background-color: black;
+            color: #0bed18;
+            font-family: monospace;
+            padding:5px;
         }
 
         ul {
@@ -18,21 +20,17 @@
 
         li {
             font-size: 20px;
-            margin: 20px;
-
+            margin:10px;
         }
 
         a {
             margin: 5px;
             font-family: 'Verdana';
-            color: #F4EEE0;
+            color: #0bed18;
             text-decoration: none;
 
         }
 
-        h1 {
-            text-align: center;
-        }
 
         .strike {
             text-decoration: line-through;
@@ -42,26 +40,7 @@
         .strike a {
             color: grey;
         }
-
-        .main-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-
-        .box {
-            background: rgba(255, 255, 255, 0);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(4.7px);
-            -webkit-backdrop-filter: blur(4.7px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 20px;
-            width: 40%;
-            height: 300px;
-
-        }
+        
     </style>
 </head>
 
@@ -69,8 +48,6 @@
 
     <h1>Task List</h1>
     <div class="main-box">
-
-        <div class="box">
 
             <ul id="taskList">
 
@@ -80,7 +57,7 @@
 
                 <li><input type="checkbox" id="task2" onclick="strike('task2')">
                     
-                    <a href="#" target="_blank">Task 2</a></li>
+                    <a href="https://www.google.com" target="_blank">Task 2</a></li>
                         
                 <li><input type="checkbox" id="task3" onclick="strike('task3')"> 
 
@@ -88,7 +65,6 @@
                 
                 <!-- Add more tasks -->
             </ul>
-        </div>
     </div>
 
     <script>
@@ -102,6 +78,8 @@
                 task.classList.remove('strike');
             }
         }
+
+
     </script>
 
 </body>
